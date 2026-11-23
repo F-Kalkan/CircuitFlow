@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "name": "Parallel Resistors",
+  "groundNodeId": "gnd",
+  "nodes": ["gnd", "n1"],
+  "components": [
+    {"id": "V1", "type": "voltageSource", "positiveNodeId": "n1", "negativeNodeId": "gnd", "volts": 10},
+    {"id": "R1", "type": "resistor", "nodeA": "n1", "nodeB": "gnd", "ohms": 1000},
+    {"id": "R2", "type": "resistor", "nodeA": "n1", "nodeB": "gnd", "ohms": 2000}
+  ]
+}

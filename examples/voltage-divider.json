@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "name": "Voltage Divider",
+  "groundNodeId": "gnd",
+  "nodes": ["gnd", "vin", "vout"],
+  "components": [
+    {"id": "V1", "type": "voltageSource", "positiveNodeId": "vin", "negativeNodeId": "gnd", "volts": 10},
+    {"id": "R1", "type": "resistor", "nodeA": "vin", "nodeB": "vout", "ohms": 1000},
+    {"id": "R2", "type": "resistor", "nodeA": "vout", "nodeB": "gnd", "ohms": 2000}
+  ]
+}
