@@ -3,8 +3,8 @@
 CircuitFlow is a desktop application that solves DC electrical circuits built
 from resistors and voltage sources, using **Modified Nodal Analysis (MNA)**.
 
-> **Work in progress.** Project setup and CI are done; the circuit model and
-> solver are next.
+> **Work in progress.** The circuit model is done and covered by unit tests;
+> validation and the solver are next.
 
 ## Planned features
 
@@ -17,7 +17,9 @@ from resistors and voltage sources, using **Modified Nodal Analysis (MNA)**.
 ## Progress
 
 - [x] Project setup and CI
-- [ ] Circuit model and validation
+- [x] Node, resistor and voltage source models
+- [x] Circuit: nodes, components and ground
+- [ ] Circuit validation (ground and connectivity)
 - [ ] MNA matrix assembly
 - [ ] Linear solver and results
 - [ ] JSON save and load
@@ -40,8 +42,9 @@ Requires JDK 21.
 ## Project structure
 
 ```text
-app/        application source and tests
-examples/   sample circuits in JSON
+app/src/main/java/.../model/   circuit model: nodes, components, circuit
+app/src/test/java/.../model/   unit tests for the model
+examples/                      sample circuits in JSON
 ```
 
 ## License
